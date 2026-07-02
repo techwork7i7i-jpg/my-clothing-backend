@@ -21,9 +21,7 @@ SECRET_KEY = os.getenv(
 )
 DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "yes")
 
-ALLOWED_HOSTS = [
-    *
-]
+ALLOWED_HOSTS = ['*']
 
 # ---------------------------------------------------------------------------
 # Applications
