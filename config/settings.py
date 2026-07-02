@@ -1,6 +1,6 @@
 """
 Django settings — loaded from environment variables (.env).
-Production defaults: DEBUG=False, secure cookies when not in debug mode.
+Production defaults: DEBUG=True, secure cookies when not in debug mode.
 """
 from datetime import timedelta
 from pathlib import Path
@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv(
     "SECRET_KEY",
     "django-insecure-change-me-in-production-use-a-long-random-key",
 )
-DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "yes")
+DEBUG = os.getenv("DEBUG", "True").lower() in ("true", "1", "yes")
 
 ALLOWED_HOSTS = ['*']
 
